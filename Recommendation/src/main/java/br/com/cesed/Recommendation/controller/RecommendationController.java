@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RecommendationController {
 	
 	@GetMapping
-	public ResponseEntity testeRecommendation() {
-		return new ResponseEntity("Eu sou o Recommendation", HttpStatus.OK);
+	public ResponseEntity<String> testeRecommendation() {
+		String a = "Eu sou o Recommendation";
+		return new ResponseEntity<String>(a, HttpStatus.OK);
 	}
 
 }

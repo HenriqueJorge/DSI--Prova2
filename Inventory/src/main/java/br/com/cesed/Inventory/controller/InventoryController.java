@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class InventoryController {
 	
 	@GetMapping
-	public ResponseEntity testeInventory() {
-		return new ResponseEntity("Eu sou o inventory", HttpStatus.OK);
+	public ResponseEntity<String> testeInventory() {
+		String a = "Eu sou o inventory";
+		return new ResponseEntity<String>(a, HttpStatus.OK);
 	}
 
 }

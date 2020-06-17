@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AccountController {
 	
 	@GetMapping
-	public ResponseEntity testeAccount(){
-		return new ResponseEntity("Sou o Account" , HttpStatus.OK);
+	public ResponseEntity<String> testeAccount(){
+		String a = "Eu sou o Account";
+		return new ResponseEntity<String>(a,HttpStatus.OK);
 	}
 
 }

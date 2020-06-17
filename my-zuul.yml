@@ -16,17 +16,17 @@ eureka:
 zuul:
   routes:
     Account:
-        path: /account/**
+        path: /1/**
         url: http://localhost:9054/account/
     Inventory:
-        path: /inventory/**
+        path: /2/**
         url: http://localhost:9053/inventory/
     Recommendation:
-        path: /recommendation/**
+        path: /3/**
         url: http://localhost:9051/recommendation/
     Order:
-        path: /order/**
+        path: /4/**
         url: http://localhost:9052/order/
     Shipping:
-        path: /shipping/**
+        path: /5/**
         url: http://localhost:9050/shipping/

@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShippingController {
 	
 	@GetMapping
-	public ResponseEntity testeShipping() {
-		return new ResponseEntity("Eu sou o Shipping", HttpStatus.OK);
+	public ResponseEntity<String> testeShipping() {
+		String a = "Eu sou o Shipping";
+		return new ResponseEntity<String>(a, HttpStatus.OK);
 	}
 
 }

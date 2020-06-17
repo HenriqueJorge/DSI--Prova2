@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class OrderController {
 	
 	@GetMapping
-	public ResponseEntity testeOrder() {
-		return new ResponseEntity("Eu sou o Order", HttpStatus.OK);
+	public ResponseEntity<String> testeOrder() {
+		String a = "Eu sou o Order";
+		return new ResponseEntity<String>(a, HttpStatus.OK);
 	}
 
 }
