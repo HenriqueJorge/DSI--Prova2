@@ -1,4 +1,4 @@
-package br.com.lelo.springcloud.myeureka;
+package br.com.cesed.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

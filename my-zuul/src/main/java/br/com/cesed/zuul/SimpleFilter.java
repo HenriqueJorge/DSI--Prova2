@@ -1,4 +1,4 @@
-package br.com.lelo.springcloud.myzuul;
+package br.com.cesed.zuul;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

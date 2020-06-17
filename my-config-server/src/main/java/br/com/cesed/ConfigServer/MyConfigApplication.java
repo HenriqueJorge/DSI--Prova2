@@ -1,4 +1,4 @@
-package br.com.lelo.springcloud.myconfig;
+package br.com.cesed.ConfigServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
