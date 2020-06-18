@@ -1,38 +1,30 @@
-https://medium.com/@locosta_61043/spring-cloud-netflix-organizando-seus-microservi%C3%A7os-5b89c443640c
+# DSI--Prova2
 
-# Spring-cloud (my-config-server)
-
-Exemplo de configuração usando o spring cloud
-![SpringClound](https://github.com/lelodois/spring-cloud/blob/master/images/novas/microservices-springcloud.png)
+Configuração de arquitetura microservice, utilizando Eureka e Spring Cloud.
+![SpringClound](https://github.com/HenriqueJorge/DSI--Prova2/blob/master/Imagen/ReadMe.jpg)
 
 ### Eureka server
 
-Projeto que registra os microserviços e monitora o status de cada
-![Eureka](https://github.com/lelodois/spring-cloud/blob/master/images/novas/eureka.png)
-
-![EurekaDiagrama](https://github.com/lelodois/spring-cloud/blob/master/images/novas/eureka-diagrama.png)
+Projeto que registra os microserviços e monitora o status de cada. Aqui sendo representado pelo serviço ServiceDiscovery.
 
 ### Config server
 
-![ConfigServer](https://github.com/lelodois/spring-cloud/blob/master/images/novas/configserver-diagrama.png)
-
-* Lê as configurações do github dos projetos abaixo:
-  - http://localhost:9080/my-eureka/default
-  - http://localhost:9080/my-customer/default
-  - http://localhost:9080/my-product/default
-  - http://localhost:9080/my-sale/default
-  - http://localhost:9080/my-zuul/default
-  
+Serviço de configuração dos outros serviços. Tem o objetivo de buscar as configurações de cada serviço no github::
+e aplicá-los em seus respectivos lugares.
 
 #### Zuul
-  Projeto de proxy para os serviços rest
-  ![Zuul](https://github.com/lelodois/spring-cloud/blob/master/images/novas/comxsem-zuul.png)
 
+Projeto de proxy para os serviços rest do projeto em questão.
 
 ### Microservices projects
 
-Projetos de microserviços que retorna um json via Rest
+Microservices que retonam um json como resposta.
 
-- https://github.com/lelodois/spring-cloud/tree/master/my-customer
-- https://github.com/lelodois/spring-cloud/tree/master/my-product
-- https://github.com/lelodois/spring-cloud/tree/master/my-sale
+### Executando
+
+Para executar o projeto, é necessário subir alguns serviços antes. <br />
+Seguindo nessa ordem:<br />
+1 - my-config-server .<br />
+2 - my-eureka .<br />
+3 - my-zuul .<br />
+4 - Qualquer outro serviço.<br />
